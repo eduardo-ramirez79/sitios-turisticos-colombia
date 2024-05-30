@@ -1,0 +1,15 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  float: left;
+  width: 200px;
+  background-size: cover;
+}
+
+.sitio-turistico-class {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+}

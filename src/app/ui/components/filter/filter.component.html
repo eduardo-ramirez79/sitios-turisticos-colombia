@@ -1,0 +1,35 @@
+<form [formGroup]="formFilter" >
+    <h2>Busqueda de Sitios turisticos</h2>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Departamentos</mat-label>
+            <mat-select formControlName="departamento">
+                <mat-option *ngFor="let department of listDepartments" [value]="department"
+                    (onSelectionChange)="selectDepartment($event)" >
+                    {{department.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Ciudades</mat-label>
+            <mat-select formControlName="ciudad">
+                <mat-option *ngFor="let city of listCities" [value]="city">
+                    {{city.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Sitio Turístico</mat-label>
+            <input matInput formControlName="sitio">
+        </mat-form-field>
+    </div>
+
+    <button mat-flat-button color="primary" type="submit">Buscar</button>
+
+</form>
